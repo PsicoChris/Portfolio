@@ -8,29 +8,30 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <div class="container header-container">
-      <h1>Christian David Lancheros Martínez    </h1>
-      <p class="subtitle">Psicólogo | MBA | Estudiante de Ing. de Software</p>
-      <nav>
-        <ul>
-          <li><a href="#sobre-mi">Sobre Mí</a></li>
-          <li><a href="#desarrollo">Proyectos de Desarrollo</a></li>
-          <li><a href="#casos">Estudios de Caso</a></li>
-          <li><a href="#proyectos">Proyectos Profesionales</a></li>
-          <li><a href="#galeria">Galería</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<header>
+  <div class="container header-container">
+    <h1>Christian David Lancheros Martínez</h1>
+    <p class="subtitle">Psicólogo | MBA | Estudiante de Ing. de Software</p>
+  </div>
+  <nav class="navbar-fixed">
+    <ul>
+      <li><a href="#sobre-mi">Sobre Mí</a></li>
+      <li><a href="#desarrollo">Proyectos de Desarrollo</a></li>
+      <li><a href="#casos">Estudios de Caso</a></li>
+      <li><a href="#proyectos">Proyectos Profesionales</a></li>
+      <li><a href="#galeria">Galería</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
 
   <main class="container">
     <!-- Sobre Mí -->
     <section id="sobre-mi" class="section">
       <h2>Sobre Mí</h2>
       <p>
-        Hola, soy Chris, psicólogo organizacional con un amplio interés en el Marketing enfocado a la estratégia. Desde muy temprano en mi carrera me sentí bastante atraído al Neuromarketing y cómo  la psicología puede influir en las decisiones de compra. Actualmente, estoy finalizando mi MBA y estudiando Ingeniería de Software para complementar mis habilidades técnicas y estratégicas. Esta mezcla en  mi formación me permite abordar proyectos desde una perspectiva integral, combinando la comprensión del comportamiento humano con el desarrollo de soluciones tecnológicas efectivas. 
+        Hola, soy Chris, psicólogo organizacional con un amplio interés en el Marketing enfocado a la estrategia. Desde muy temprano en mi carrera me sentí bastante atraído al Neuromarketing y cómo  la psicología puede influir en las decisiones de compra. Actualmente, estoy finalizando mi MBA y estudiando Ingeniería de Software para complementar mis habilidades técnicas y estratégicas. Esta mezcla en  mi formación me permite abordar proyectos desde una perspectiva integral, combinando la comprensión del comportamiento humano con el desarrollo de soluciones tecnológicas efectivas. 
       </p>
       <p>
         Mis habilidades técnicas incluyen HTML5, CSS3, JavaScript, Python, SQL y Git, orientadas al desarrollo. Además, tengo experiencia trabajando con la suite de Microsoft Office, incluyendo Excel, Word y PowerPoint, así como con herramientas de diseño como Canva.
@@ -74,7 +75,7 @@
 
       <article class="caso">
         <h3>Análisis y propuesta de digitalización: Arde Bogotá</h3>
-        <p><strong>Propósito:</strong> Comprender la situación actual de la nbanda y diseñar un plan digital orientado a diferentes públicos objetivos</p>
+        <p><strong>Propósito:</strong> Comprender la situación actual de la nbanda y diseñar un plan digital orientado a diferentes públicos objetivos.</p>
         <p><strong>Objetivo:</strong> Aumentar el número de oyentes mensuales en plataformas digitales.</p>
         <p><strong>Enfoque:</strong> Diseño de un plan digital con acciones en redes sociales, plataformas de streaming, campañas de contenido, y colaboraciones.</p>
         <p><strong>Duración:</strong> 2 meses.</p>
@@ -103,7 +104,7 @@
     - <em>Marketing tradicional:</em> Diseño de flyers, banners, eventos promocionales y alianzas locales para aumentar la visibilidad física de la marca.
   </p>
   <ul>
-    <li><strong>Tecnologías:</strong> HTML, CSS, JavaScript, Notion, Canva, Microsoft Office, Google Workspace</li>
+    <li><strong>Tecnologías:</strong> HTML, CSS, JavaScript, Notion, Canva, Microsoft Office, Google Workspace.</li>
     <li><strong>Rol:</strong> Consultor de Estrategia</li>
     <li><a href="https://drive.google.com/file/d/1kNpC-7VPo34xaC8TwxLngCfVwDZauXr2/view?usp=drive_link" target="_blank" rel="noopener">Ver Manual</a></li>
     <li><a href="https://github.com/PsicoChris/Vortex" target="_blank" rel="noopener">Ver Repositorio</a></li>
@@ -115,21 +116,21 @@
     </section>
 
     <!-- Galería de Imágenes -->
-    <section id="galeria" class="section">
-      <h2>Galería de Imágenes</h2>
-      <div class="gallery">
-        <img src="imagenes/proyecto1.jpg" alt="Proyecto 1" />
-        <img src="imagenes/proyecto2.jpg" alt="Proyecto 2" />
-        <img src="imagenes/proyecto3.jpg" alt="Proyecto 3" />
-        <img src="imagenes/proyecto4.jpg" alt="Proyecto 4" />
-        <img src="imagenes/proyecto4.jpg" alt="Proyecto 4" />
-        <img src="imagenes/proyecto4.jpg" alt="Proyecto 4" />
-        <img src="imagenes/proyecto4.jpg" alt="Proyecto 4" />
-        <img src="imagenes/proyecto4.jpg" alt="Proyecto 4" />
-
-        <!-- Añade más imágenes según tus proyectos -->
+<section id="galeria" class="section container">
+  <h2>Galería de Imágenes</h2>
+  <div class="carousel">
+    <button class="carousel-btn prev" aria-label="Anterior">&#10094;</button>
+    <div class="carousel-track-container">
+      <div class="carousel-track">
+        <img src="imagenes/escritor.png" alt="Imagen 1">
+        <img src="imagenes/escritor.png" alt="Imagen 2">
+        <img src="imagenes/escritor.png" alt="Imagen 3">
+        <!-- Añade más imágenes si lo deseas -->
       </div>
-    </section>
+    </div>
+    <button class="carousel-btn next" aria-label="Siguiente">&#10095;</button>
+  </div>
+</section>
 
     <!-- Contacto -->
     <section id="contacto" class="section">
