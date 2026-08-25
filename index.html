@@ -4,145 +4,402 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portafolio Profesional - Chris Lancheros Martinez</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<header>
-  <div class="container header-container">
-    <h1>Christian David Lancheros Martínez</h1>
-    <p class="subtitle">Psicólogo | MBA | Estudiante de Ing. de Software</p>
-  </div>
-  <nav class="navbar-fixed">
-    <ul>
-      <li><a href="#sobre-mi">Sobre Mí</a></li>
-      <li><a href="#desarrollo">Proyectos de Desarrollo</a></li>
-      <li><a href="#casos">Estudios de Caso</a></li>
-      <li><a href="#proyectos">Proyectos Profesionales</a></li>
-      <li><a href="#galeria">Galería</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-  </nav>
-</header>
 
+  <!-- Barra de Navegación Fija -->
+  <nav class="navbar-fixed">
+    <div class="container">
+      <ul>
+        <li><a href="#sobre-mi"><span class="lang-es">Sobre Mí</span><span class="lang-en">About Me</span></a></li>
+        <li><a href="#desarrollo"><span class="lang-es">Proyectos de Desarrollo</span><span class="lang-en">Development Projects</span></a></li>
+        <li><a href="#casos"><span class="lang-es">Estudios de Caso</span><span class="lang-en">Case Studies</span></a></li>
+        <li><a href="#proyectos"><span class="lang-es">Proyectos Profesionales</span><span class="lang-en">Professional Projects</span></a></li>
+        <li><a href="#galeria"><span class="lang-es">Galería</span><span class="lang-en">Gallery</span></a></li>
+        <li><a href="#contacto"><span class="lang-es">Contacto</span><span class="lang-en">Contact</span></a></li>
+        <li><a href="#" id="theme-toggle" onclick="event.preventDefault(); toggleTheme()">🌙 Oscuro</a></li>
+        <li><a href="#" id="lang-toggle" onclick="event.preventDefault(); toggleLanguage()">🌐 EN</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Encabezado / Hero -->
+  <header>
+    <div class="container">
+      <h1>Christian David Lancheros Martínez</h1>
+      <p class="subtitle lang-es">Psicólogo | MBA | Estudiante de Ing. de Software</p>
+      <p class="subtitle lang-en">Psychologist | MBA | Software Engineering Student</p>
+    </div>
+  </header>
 
   <main class="container">
     <!-- Sobre Mí -->
     <section id="sobre-mi" class="section">
-      <h2>Sobre Mí</h2>
-      <p>
-        Hola, soy Chris, psicólogo organizacional con un amplio interés en el Marketing enfocado a la estrategia. Desde muy temprano en mi carrera me sentí bastante atraído al Neuromarketing y cómo  la psicología puede influir en las decisiones de compra. Actualmente, estoy finalizando mi MBA y estudiando Ingeniería de Software para complementar mis habilidades técnicas y estratégicas. Esta mezcla en  mi formación me permite abordar proyectos desde una perspectiva integral, combinando la comprensión del comportamiento humano con el desarrollo de soluciones tecnológicas efectivas. 
-      </p>
-      <p>
-        Mis habilidades técnicas incluyen HTML5, CSS3, JavaScript, Python, SQL y Git, orientadas al desarrollo. Además, tengo experiencia trabajando con la suite de Microsoft Office, incluyendo Excel, Word y PowerPoint, así como con herramientas de diseño como Canva.
-        Cuento con certificaciones en Desarrollo en Python y experiencia trabajando en equipos ágiles interdisciplinarios en el area de reclutamiento y marketing.
-      </p>
+      <h2 class="lang-es">Sobre Mí</h2>
+      <h2 class="lang-en">About Me</h2>
+      
+      <div class="lang-es">
+        <p>
+          Hola, soy Chris, psicólogo organizacional con un amplio interés en el Marketing enfocado a la estrategia. Desde muy temprano en mi carrera me sentí bastante atraído al Neuromarketing y cómo la psicología puede influir en las decisiones de compra. Actualmente, estoy finalizando mi MBA y estudiando Ingeniería de Software para complementar mis habilidades técnicas y estratégicas. Esta mezcla en mi formación me permite abordar proyectos desde una perspectiva integral, combinando la comprensión del comportamiento humano con el desarrollo de soluciones tecnológicas efectivas. 
+        </p>
+        <p>
+          Mis habilidades técnicas incluyen HTML5, CSS3, JavaScript, Python, SQL y Git, orientadas al desarrollo. Además, tengo experiencia trabajando con la suite de Microsoft Office, incluyendo Excel, Word y PowerPoint, así como con herramientas de diseño como Canva.
+          Cuento con certificaciones en Desarrollo en Python y experiencia trabajando en equipos ágiles interdisciplinarios en el area de reclutamiento y marketing.
+        </p>
+      </div>
+      
+      <div class="lang-en">
+        <p>
+          Hello, I am Chris, an organizational psychologist with a broad interest in strategy-focused Marketing. From very early in my career, I felt drawn to Neuromarketing and how psychology can influence purchasing decisions. Currently, I am finishing my MBA and studying Software Engineering to complement my technical and strategic skills. This blend in my background allows me to approach projects from a holistic perspective, combining human behavior understanding with effective technological solutions.
+        </p>
+        <p>
+          My technical skills include HTML5, CSS3, JavaScript, Python, SQL, and Git, oriented toward development. Additionally, I have experience working with the Microsoft Office suite, including Excel, Word, and PowerPoint, as well as design tools like Canva.
+          I hold certifications in Python Development and have experience working in interdisciplinary agile teams in recruitment and marketing.
+        </p>
+      </div>
     </section>
 
     <!-- Proyectos de Desarrollo -->
     <section id="desarrollo" class="section">
-      <h2>Proyectos de Desarrollo</h2>
+      <div class="section-header-wrap">
+        <h2 class="lang-es">Proyectos de Desarrollo</h2>
+        <h2 class="lang-en">Development Projects</h2>
+        <button class="btn btn-add-project admin-only" onclick="openAddProjectModal('desarrollo')">
+          <span class="lang-es">＋ Añadir Proyecto</span>
+          <span class="lang-en">＋ Add Project</span>
+        </button>
+      </div>
 
-      <article class="proyecto">
-        <h3>Nómina Colombia</h3>
-        <p>Aplicación que permite conocer el salario neto al contratar a una persona en Colombia bajo las diferentes modalidades de contratación (Prestación de Servicios y Contrato Directo). Esta aplicación tiene en cuenta los topes salariales para un contrato "nominal" y un contrato "integral" en el caso de las contrataciones directas.</p>
-        <ul>
-          <li><strong>Tecnologías:</strong> Python</li>
-          <li><strong>Rol:</strong> Talent Associate</li>
-          <li><a href="https://github.com/PsicoChris/Nomina-Colombia" target="_blank" rel="noopener">Ver código en GitHub</a></li>
-        </ul>
-        <img src="imagenes/nomina.png" alt="Captura de la aplicación" width="400" />
-        <p><strong>Resultados:</strong> La solución desarrollada facilitó la negociación salarial al ofrecer orientación personalizada sobre bandas salariales, lo que permitió una alineación más precisa con las expectativas de los candidatos.</p>
-      </article>
-
-      <article class="proyecto">
-        <h3>Interview Writer</h3>
-        <p>Aplicación desarrollada para automatizar el diseño y redacción de notas enviadas a una empresa externa, con el objetivo de reducir significativamente el tiempo dedicado a esta tarea y permitir que el equipo de reclutamiento pueda enfocarse en etapas más estratégicas del proceso.</p>
-        <ul>
-          <li><strong>Tecnologías:</strong> Python, Tkinter, Docxtpl</li>
-          <li><strong>Rol:</strong> Talent Associate</li>
-          <li><a href="https://github.com/PsicoChris/IV-writer" target="_blank" rel="noopener">Ver código en GitHub</a></li>
-        </ul>
-        <img src="imagenes/escritor.png" alt="Captura de la aplicación" width="400" />
-        <p><strong>Resultados:</strong> Se logró una reducción significativa en los tiempos de redacción de notas, lo que facilitó el envío ágil de múltiples CVs a la empresa externa durante el proyecto.</p>
-      </article>
-
+      <div class="projects-grid" id="desarrollo-grid">
+      </div>
     </section>
 
     <!-- Estudios de Caso -->
     <section id="casos" class="section">
-      <h2>Estudios de Caso</h2>
+      <div class="section-header-wrap">
+        <h2 class="lang-es">Estudios de Caso</h2>
+        <h2 class="lang-en">Case Studies</h2>
+        <button class="btn btn-add-project admin-only" onclick="openAddProjectModal('casos')">
+          <span class="lang-es">＋ Añadir Caso</span>
+          <span class="lang-en">＋ Add Case</span>
+        </button>
+      </div>
 
-      <article class="caso">
-        <h3>Análisis y propuesta de digitalización: Arde Bogotá</h3>
-        <p><strong>Propósito:</strong> Comprender la situación actual de la nbanda y diseñar un plan digital orientado a diferentes públicos objetivos.</p>
-        <p><strong>Objetivo:</strong> Aumentar el número de oyentes mensuales en plataformas digitales.</p>
-        <p><strong>Enfoque:</strong> Diseño de un plan digital con acciones en redes sociales, plataformas de streaming, campañas de contenido, y colaboraciones.</p>
-        <p><strong>Duración:</strong> 2 meses.</p>
-        <p><strong>Rol:</strong> Estudiante de MBA.</p>
-        <li><a href="https://docs.google.com/document/d/1aDdniahuA4UC4wjLeaIIh4BF7j7nNSxOYltZ90JrHEw/edit?usp=sharing" target="_blank" rel="noopener">Ver análisis detallado del proyecto</a></li>
-      </article>
-
-      <!-- Más estudios de caso aquí -->
+      <div class="projects-grid" id="casos-grid">
+        <article class="caso" data-id="project-3">
+          <div class="card-admin-controls admin-only">
+            <button class="btn-card-admin btn-card-edit" onclick="openEditProjectModal(this)">✏️</button>
+            <button class="btn-card-admin btn-card-delete" onclick="deleteProject(this)">🗑️</button>
+          </div>
+          
+          <div class="lang-es">
+            <h3>Análisis y propuesta de digitalización: Arde Bogotá</h3>
+            <ul class="caso-metadata">
+              <li><strong>Propósito:</strong> Comprender la situación actual de la banda y diseñar un plan digital orientado a diferentes públicos objetivos.</li>
+              <li><strong>Objetivo:</strong> Aumentar el número de oyentes mensuales en plataformas digitales.</li>
+              <li><strong>Enfoque:</strong> Diseño de un plan digital con acciones en redes sociales, plataformas de streaming, campañas de contenido, y colaboraciones.</li>
+              <li><strong>Duración:</strong> 2 meses.</li>
+              <li><strong>Rol:</strong> Estudiante de MBA.</li>
+            </ul>
+            <div class="project-links">
+              <a class="btn btn-primary" href="https://docs.google.com/document/d/1aDdniahuA4UC4wjLeaIIh4BF7j7nNSxOYltZ90JrHEw/edit?usp=sharing" target="_blank" rel="noopener">Ver análisis detallado del proyecto</a>
+            </div>
+          </div>
+          
+          <div class="lang-en">
+            <h3>Analysis and digitalization proposal: Arde Bogota</h3>
+            <ul class="caso-metadata">
+              <li><strong>Purpose:</strong> Understand the band's current situation and design a digital plan tailored to different target audiences.</li>
+              <li><strong>Objective:</strong> Increase monthly listeners on digital platforms.</li>
+              <li><strong>Approach:</strong> Design of a digital plan with actions on social media, streaming platforms, content campaigns, and collaborations.</li>
+              <li><strong>Duration:</strong> 2 months.</li>
+              <li><strong>Role:</strong> MBA Student.</li>
+            </ul>
+            <div class="project-links">
+              <a class="btn btn-primary" href="https://docs.google.com/document/d/1aDdniahuA4UC4wjLeaIIh4BF7j7nNSxOYltZ90JrHEw/edit?usp=sharing" target="_blank" rel="noopener">View detailed project analysis</a>
+            </div>
+          </div>
+        </article>
+      </div>
     </section>
 
     <!-- Proyectos Profesionales -->
     <section id="proyectos" class="section">
-      <h2>Proyectos Profesionales</h2>
+      <div class="section-header-wrap">
+        <h2 class="lang-es">Proyectos Profesionales</h2>
+        <h2 class="lang-en">Professional Projects</h2>
+        <button class="btn btn-add-project admin-only" onclick="openAddProjectModal('proyectos')">
+          <span class="lang-es">＋ Añadir Proyecto</span>
+          <span class="lang-en">＋ Add Project</span>
+        </button>
+      </div>
 
-      <article class="proyecto">
-  <h3>Vortex MMA</h3>
-  <p>
-    Diseño y desarrollo integral de la identidad y estrategia comercial para Vortex MMA, academia de artes marciales.<br><br>
-
-    <strong>Modelo de negocio:</strong> Creación y estructuración del modelo empresarial, incluyendo la propuesta de valor, segmentación de clientes, canales de venta y fuentes de ingresos.<br><br>
-    <strong>Manual de marca:</strong> Desarrollo de la identidad visual (logotipo, paleta de colores, tipografía, tono de comunicación) y aplicación coherente en todos los puntos de contacto.<br><br>
-    <strong>Diseño y desarrollo web:</strong> Planificación y diseño de la página web institucional con enfoque en conversión, optimización SEO, experiencia de usuario (UX) y versión responsive.<br><br>
-    <strong>CRM y base de datos:</strong> Creación e implementación de un sistema de seguimiento tipo CRM en Notion para la gestión de prospectos y alumnos, con una base de datos organizada y segmentada para facilitar seguimiento, comunicación y fidelización.<br><br>
-    <strong>Estrategia de marketing integral:</strong><br>
-    - <em>Marketing digital:</em> Campañas en redes sociales, pauta publicitaria y posicionamiento web por medio de SEO<br>
-    - <em>Marketing tradicional:</em> Diseño de flyers, banners, eventos promocionales y alianzas locales para aumentar la visibilidad física de la marca.
-  </p>
-  <ul>
-    <li><strong>Tecnologías:</strong> HTML, CSS, JavaScript, Notion, Canva, Microsoft Office, Google Workspace.</li>
-    <li><strong>Rol:</strong> Consultor de Estrategia</li>
-    <li><a href="https://drive.google.com/file/d/1kNpC-7VPo34xaC8TwxLngCfVwDZauXr2/view?usp=drive_link" target="_blank" rel="noopener">Ver Manual</a></li>
-    <li><a href="https://github.com/PsicoChris/Vortex" target="_blank" rel="noopener">Ver Repositorio</a></li>
-  </ul>
-</article>
-
-
-      <!-- Más proyectos profesionales aquí -->
+      <div class="projects-grid" id="proyectos-grid">
+        <article class="proyecto" data-id="project-4">
+          <div class="card-admin-controls admin-only">
+            <button class="btn-card-admin btn-card-edit" onclick="openEditProjectModal(this)">✏️</button>
+            <button class="btn-card-admin btn-card-delete" onclick="deleteProject(this)">🗑️</button>
+          </div>
+          
+          <div class="lang-es">
+            <h3>Vortex MMA</h3>
+            <p>
+              Diseño y desarrollo integral de la identidad y estrategia comercial para Vortex MMA, academia de artes marciales.<br><br>
+              <strong>Modelo de negocio:</strong> Creación y estructuración del modelo empresarial, incluyendo la propuesta de valor, segmentación de clientes, canales de venta y fuentes de ingresos.<br><br>
+              <strong>Manual de marca:</strong> Desarrollo de la identidad visual (logotipo, paleta de colores, tipografía, tono de comunicación) y aplicación coherente en todos los puntos de contacto.<br><br>
+              <strong>Diseño y desarrollo web:</strong> Planificación y diseño de la página web institucional con enfoque en conversión, optimización SEO, experiencia de usuario (UX) y versión responsive.<br><br>
+              <strong>CRM y base de datos:</strong> Creación e implementación de un sistema de seguimiento tipo CRM en Notion para la gestión de prospectos y alumnos, con una base de datos organizada y segmentada para facilitar seguimiento, comunicación y fidelización.<br><br>
+              <strong>Estrategia de marketing integral:</strong><br>
+              - <em>Marketing digital:</em> Campañas en redes sociales, pauta publicitaria y posicionamiento web por medio de SEO<br>
+              - <em>Marketing tradicional:</em> Diseño de flyers, banners, eventos promocionales y alianzas locales para aumentar la visibilidad física de la marca.
+            </p>
+            <ul class="tech-list">
+              <li class="tech-pill">HTML</li>
+              <li class="tech-pill">CSS</li>
+              <li class="tech-pill">JavaScript</li>
+              <li class="tech-pill">Notion</li>
+              <li class="tech-pill">Canva</li>
+              <li class="tech-pill">Microsoft Office</li>
+              <li class="tech-pill">Google Workspace</li>
+            </ul>
+            <ul class="meta-info">
+              <li><strong>Rol:</strong> Consultor de Estrategia</li>
+            </ul>
+            <div class="project-links">
+              <a class="btn btn-primary" href="https://drive.google.com/file/d/1kNpC-7VPo34xaC8TwxLngCfVwDZauXr2/view?usp=drive_link" target="_blank" rel="noopener">Ver Manual</a>
+              <a class="btn btn-secondary" href="https://github.com/PsicoChris/Vortex" target="_blank" rel="noopener">Ver Repositorio</a>
+            </div>
+          </div>
+          
+          <div class="lang-en">
+            <h3>Vortex MMA</h3>
+            <p>
+              Comprehensive design and development of the identity and commercial strategy for Vortex MMA, a martial arts academy.<br><br>
+              <strong>Business Model:</strong> Creation and structuring of the business model, including value proposition, customer segmentation, sales channels, and revenue streams.<br><br>
+              <strong>Brand Manual:</strong> Visual identity development (logo, color palette, typography, tone of communication) and consistent application across all touchpoints.<br><br>
+              <strong>Web Design & Development:</strong> Planning and design of the institutional website with a focus on conversion, SEO optimization, user experience (UX), and responsive version.<br><br>
+              <strong>CRM & Database:</strong> Creation and implementation of a Notion CRM tracking system for lead and student management, with an organized and segmented database to facilitate follow-up, communication, and retention.<br><br>
+              <strong>Integrated Marketing Strategy:</strong><br>
+              - <em>Digital Marketing:</em> Campaigns on social media, paid ads, and web positioning through SEO.<br>
+              - <em>Traditional Marketing:</em> Design of flyers, banners, promotional events, and local partnerships to increase the physical visibility of the brand.
+            </p>
+            <ul class="tech-list">
+              <li class="tech-pill">HTML</li>
+              <li class="tech-pill">CSS</li>
+              <li class="tech-pill">JavaScript</li>
+              <li class="tech-pill">Notion</li>
+              <li class="tech-pill">Canva</li>
+              <li class="tech-pill">Microsoft Office</li>
+              <li class="tech-pill">Google Workspace</li>
+            </ul>
+            <ul class="meta-info">
+              <li><strong>Role:</strong> Strategy Consultant</li>
+            </ul>
+            <div class="project-links">
+              <a class="btn btn-primary" href="https://drive.google.com/file/d/1kNpC-7VPo34xaC8TwxLngCfVwDZauXr2/view?usp=drive_link" target="_blank" rel="noopener">View Manual</a>
+              <a class="btn btn-secondary" href="https://github.com/PsicoChris/Vortex" target="_blank" rel="noopener">View Repository</a>
+            </div>
+          </div>
+        </article>
+      </div>
     </section>
 
     <!-- Galería de Imágenes -->
-<section id="galeria" class="section container">
-  <h2>Galería de Imágenes</h2>
-  <div class="carousel">
-    <button class="carousel-btn prev" aria-label="Anterior">&#10094;</button>
-    <div class="carousel-track-container">
-      <div class="carousel-track">
-        <img src="imagenes/escritor.png" alt="Imagen 1">
-        <img src="imagenes/escritor.png" alt="Imagen 2">
-        <img src="imagenes/escritor.png" alt="Imagen 3">
-        <!-- Añade más imágenes si lo deseas -->
+    <section id="galeria" class="section container">
+      <h2 class="lang-es">Galería de Imágenes</h2>
+      <h2 class="lang-en">Image Gallery</h2>
+      <div class="carousel">
+        <button class="carousel-btn prev" aria-label="Anterior">&#10094;</button>
+        <div class="carousel-track-container">
+          <div class="carousel-track">
+            <div style="min-width: 100%; height: 350px; display: flex; flex-direction: column; align-items: center; justify-content: center; background: var(--bg-light); color: var(--text-muted); padding: 2rem; border-radius: var(--border-radius-md); text-align: center; border: 2px dashed rgba(46, 125, 50, 0.2);">
+              <span style="font-size: 2.5rem; margin-bottom: 1rem;">📷</span>
+              <p class="lang-es" style="font-weight: 600; margin-bottom: 0.5rem; color: var(--primary-dark);">Galería de Imágenes Vacía</p>
+              <p class="lang-es" style="font-size: 0.9rem; margin-bottom: 0;">Sube tus imágenes a la carpeta "imagenes" y agrégalas como etiquetas &lt;img&gt; dentro de &lt;div class="carousel-track"&gt; en tu index.html.</p>
+              <p class="lang-en" style="font-weight: 600; margin-bottom: 0.5rem; color: var(--primary-dark);">Empty Image Gallery</p>
+              <p class="lang-en" style="font-size: 0.9rem; margin-bottom: 0;">Upload your images to the "imagenes" folder and add them as &lt;img&gt; tags inside &lt;div class="carousel-track"&gt; in your index.html.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-btn next" aria-label="Siguiente">&#10095;</button>
       </div>
-    </div>
-    <button class="carousel-btn next" aria-label="Siguiente">&#10095;</button>
-  </div>
-</section>
+    </section>
 
     <!-- Contacto -->
     <section id="contacto" class="section">
-      <h2>Contacto</h2>
-      <p>¿Quieres contactarme? Escríbeme a <a href="mailto:chrislanmarconsult@gmail.com">chrislanmarconsult@gmail.com</a></p>
-      <p>También puedes encontrarme en <a href="https://www.linkedin.com/in/chrislanmar/" target="_blank" rel="noopener">LinkedIn</a></p>
+      <h2 class="lang-es">Contacto</h2>
+      <h2 class="lang-en">Contact</h2>
+      
+      <div class="lang-es">
+        <p>¿Quieres contactarme? Escríbeme a <a href="mailto:chrislanmarconsult@gmail.com">chrislanmarconsult@gmail.com</a></p>
+        <p>También puedes encontrarme en <a href="https://www.linkedin.com/in/chrislanmar/" target="_blank" rel="noopener">LinkedIn</a></p>
+      </div>
+      
+      <div class="lang-en">
+        <p>Want to contact me? Write to me at <a href="mailto:chrislanmarconsult@gmail.com">chrislanmarconsult@gmail.com</a></p>
+        <p>You can also find me on <a href="https://www.linkedin.com/in/chrislanmar/" target="_blank" rel="noopener">LinkedIn</a></p>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025  By Chris. Todos los derechos reservados.</p>
+    <p>&copy; 2025 By Chris. <span class="lang-es">Todos los derechos reservados.</span><span class="lang-en">All rights reserved.</span> | <a href="#" class="admin-toggler-link" onclick="event.preventDefault(); toggleAdminMode(true)"><span class="lang-es">Modo Editor</span><span class="lang-en">Editor Mode</span></a></p>
   </footer>
+
+  <!-- Panel de Administración Flotante -->
+  <div class="admin-floating-panel admin-only-flex">
+    <p>⚡ <span class="lang-es">Modo Editor Activo</span><span class="lang-en">Editor Mode Active</span></p>
+    <div class="panel-buttons">
+      <button class="btn-panel btn-panel-save" onclick="downloadUpdatedHTML()"><span class="lang-es">💾 Guardar y Descargar index.html</span><span class="lang-en">💾 Save and Download index.html</span></button>
+      <button class="btn-panel btn-panel-exit" onclick="toggleAdminMode(false)"><span class="lang-es">Salir</span><span class="lang-en">Exit</span></button>
+    </div>
+  </div>
+
+  <!-- Modal para Agregar/Editar Proyectos -->
+  <div class="modal-overlay" id="project-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modal-title"><span class="lang-es">Añadir Proyecto</span><span class="lang-en">Add Project</span></h3>
+        <button class="btn-close-modal" onclick="closeProjectModal()">&times;</button>
+      </div>
+      <form id="project-form" onsubmit="handleProjectFormSubmit(event)">
+        <input type="hidden" id="form-action" value="add" />
+        <input type="hidden" id="form-section-id" value="" />
+        <input type="hidden" id="form-project-id" value="" />
+        
+        <div class="form-group">
+          <label for="project-title">
+            <span class="lang-es">Título del Proyecto *</span>
+            <span class="lang-en">Project Title *</span>
+          </label>
+          <input type="text" id="project-title" class="form-control" required placeholder="Ej: Vortex MMA / e.g. Vortex MMA" />
+        </div>
+        
+        <div class="form-group" id="desc-group">
+          <label for="project-desc">
+            <span class="lang-es">Descripción / Detalles *</span>
+            <span class="lang-en">Description / Details *</span>
+          </label>
+          <textarea id="project-desc" class="form-control" rows="5" required placeholder="Descripción del proyecto / Project details..."></textarea>
+        </div>
+        
+        <!-- Campos específicos para Estudios de Caso -->
+        <div id="caso-fields" style="display: none;">
+          <div class="form-group">
+            <label for="caso-proposito">
+              <span class="lang-es">Propósito *</span>
+              <span class="lang-en">Purpose *</span>
+            </label>
+            <textarea id="caso-proposito" class="form-control" rows="2" placeholder="Ej: Comprender la situación de la banda... / e.g. Understand the band's current situation..."></textarea>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="caso-objetivo">
+                <span class="lang-es">Objetivo *</span>
+                <span class="lang-en">Objective *</span>
+              </label>
+              <textarea id="caso-objetivo" class="form-control" rows="2" placeholder="Ej: Aumentar el número de oyentes... / e.g. Increase monthly listeners..."></textarea>
+            </div>
+            <div class="form-group">
+              <label for="caso-enfoque">
+                <span class="lang-es">Enfoque *</span>
+                <span class="lang-en">Approach *</span>
+              </label>
+              <textarea id="caso-enfoque" class="form-control" rows="2" placeholder="Ej: Diseño de un plan digital... / e.g. Design of a digital plan..."></textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="caso-duracion">
+              <span class="lang-es">Duración *</span>
+              <span class="lang-en">Duration *</span>
+            </label>
+            <input type="text" id="caso-duracion" class="form-control" placeholder="Ej: 2 meses / e.g. 2 months" />
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="project-role">
+              <span class="lang-es">Rol *</span>
+              <span class="lang-en">Role *</span>
+            </label>
+            <input type="text" id="project-role" class="form-control" required placeholder="Ej: Consultor / e.g. Strategy Consultant" />
+          </div>
+          <div class="form-group">
+            <label for="project-techs">
+              <span class="lang-es">Tecnologías (separadas por coma)</span>
+              <span class="lang-en">Technologies (comma-separated)</span>
+            </label>
+            <input type="text" id="project-techs" class="form-control" placeholder="Ej: Python, SQL, Git" />
+          </div>
+        </div>
+        
+        <!-- Enlaces -->
+        <div class="form-row">
+          <div class="form-group">
+            <label>
+              <span class="lang-es">Enlace Principal (Botón Principal)</span>
+              <span class="lang-en">Primary Link (Main Button)</span>
+            </label>
+            <div style="display: flex; gap: 0.25rem; margin-bottom: 0.25rem;">
+              <input type="text" id="project-link-primary-text" class="form-control" placeholder="Texto (ej: Ver Código / View Code)" style="flex: 2;" />
+              <input type="url" id="project-link-primary-url" class="form-control" placeholder="https://..." style="flex: 3;" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>
+              <span class="lang-es">Enlace Secundario (Botón Secundario)</span>
+              <span class="lang-en">Secondary Link (Secondary Button)</span>
+            </label>
+            <div style="display: flex; gap: 0.25rem; margin-bottom: 0.25rem;">
+              <input type="text" id="project-link-secondary-text" class="form-control" placeholder="Texto (ej: Demo)" style="flex: 2;" />
+              <input type="url" id="project-link-secondary-url" class="form-control" placeholder="https://..." style="flex: 3;" />
+            </div>
+          </div>
+        </div>
+        
+        <!-- Imagen -->
+        <div class="form-group" id="image-group">
+          <label>
+            <span class="lang-es">Imagen del Proyecto (Solo Desarrollo y Profesionales)</span>
+            <span class="lang-en">Project Image (Development & Professional Only)</span>
+          </label>
+          <input type="text" id="project-img-url" class="form-control" placeholder="URL: imagenes/nomina.png" style="margin-bottom: 0.5rem;" />
+          <div class="file-input-wrapper">
+            <span class="file-input-label">
+              <span class="lang-es">📁 Cargar imagen local</span>
+              <span class="lang-en">📁 Upload local image</span>
+            </span>
+            <input type="file" id="project-img-file" class="form-control-file" accept="image/*" onchange="previewSelectedImage(this)" />
+          </div>
+          <div class="img-preview-container" id="img-preview-container">
+            <img id="img-preview" class="img-preview" src="" alt="Vista previa" />
+          </div>
+        </div>
+        
+        <!-- Resultados -->
+        <div class="form-group" id="results-group">
+          <label for="project-results">
+            <span class="lang-es">Resultados / Impacto (Opcional)</span>
+            <span class="lang-en">Results / Impact (Optional)</span>
+          </label>
+          <textarea id="project-results" class="form-control" rows="2" placeholder="Ej: Se logró una reducción... / e.g. Achieved a 30% reduction..."></textarea>
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" onclick="closeProjectModal()">
+            <span class="lang-es">Cancelar</span>
+            <span class="lang-en">Cancel</span>
+          </button>
+          <button type="submit" class="btn btn-primary" id="btn-save-project">
+            <span class="lang-es">Guardar</span>
+            <span class="lang-en">Save</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
